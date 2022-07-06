@@ -36,7 +36,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Respon
     map.set(time, DateTime.fromISO(time).setZone(outputTimeZone).toFormat(outputFormat).toString());
   });
 
-  map.forEach((key: string, value: string) => {
+  map.forEach((value: string, key: string) => {
     response.times.push({
       key: key,
       value: value
